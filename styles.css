@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+
+:root {
+  /* ----- Colors ----- */
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+
+  /* ----- Typography ----- */
+  --primary-ff: 'Alata', sans-serif;
+  --headings-ff: 'Josefin Sans', sans-serif;
+  --headings-fs: 2rem;
+  --headings-mt: 2em;
+}
+
+/* ----- Resets ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ----- Frontend Mentor-specific Stylings ----- */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ----- Global ----- */
+body {
+  font-family: var(--primary-ff);
+  font-size: 15px;
+}
+
+img { width: 100%; }
+
+/* ----- Utilities ----- */
+.container {
+  width: 85%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.grid-center-item {
+  display: grid;
+  justify-items: center;
+}
+
+section {
+  padding-top: 5em;
+}
+
+h1,
+h2 {
+  font-family: var(--headings-ff);
+}
+
+.section__heading {
+  font-size: var(--headings-fs);
+  margin-top: var(--headings-mt);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section__description {
+  color: var(--dark-gray);
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* ----- Hero Section ----- */
+.hero {
+  background-image: url(./images/desktop/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 55% 0%;
+  min-height: 100vh;
+}
+
+.hero__title--container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 0.5em;
+  border: 3px solid var(--white);
+}
+
+/* ----- Navbar ----- */
+
+.navbar {
+  padding-top: 2em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo_container,
+.hamburger_menu_container,
+.close_hamburger_container {
+  z-index: 100;
+}
+
+.nav__menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2em;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black);
+  transition: 0.3s;
+}
+
+.nav__menu.active { left: 0; }
+
+.hamburger_menu_container.hidden { display: none; }
+
+.close_hamburger_container { display: none; }
+
+.close_hamburger_container.active { display: block; }
+
+.nav__menu--item {
+  font-family: var(--headings-ff);
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  color: var(--white);
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav__menu--item:last-child { margin-bottom: 0; }
+
+/* ----- Leader in VR section ----- */
+
+/* ----- Our Creations section ------ */
+.creations__heading {
+  margin-bottom: 1em;
+}
+
+.creation-container {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.creation-container::after {
+  width:100%;
+  content:'';
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  background: linear-gradient(to right, rgb(46, 46, 46) 0%,rgba(255,255,255,0) 30%);
+  height:100%;
+}
+
+.creation-container:last-child { margin-bottom: 0; }
+
+.creation_title {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-family: var(--headings-ff);
+  font-size: 1.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  z-index: 101;
+  width: 40%;
+}
+
+/* To ensure that "The Grid" text is on two separate lines */
+.creation_title--grid { width: 10%; }
+
+.btn {
+  font-family: var(--primary-ff);
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 50%;
+  padding: 0.5em 0.5em;
+  background: var(--white);
+  border: 1px solid var(--black);
+  margin-bottom: 5em;
+}
+
+/* ----- Footer ----- */
+footer {
+  background-color: var(--black);
+}
+
+.footer_logo {
+  width: auto;
+  margin: 3em 0 2em 0;
+}
+
+.footer_list_item {
+  color: var(--white);
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+.footer_list_item:last-child { margin-bottom: 3em; }
+
+.social-logos-container {
+  display: flex;
+}
+
+.social_logo { margin-right: 1em; }
+
+.social_logo:last-child { margin-right: 0; }
+
+.copyright {
+  color: var(--dark-gray);
+  margin: 1em 0 3em 0;
+}
