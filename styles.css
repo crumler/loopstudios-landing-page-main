@@ -225,3 +225,56 @@ footer {
   color: var(--dark-gray);
   margin: 1em 0 3em 0;
 }
+
+/* ----- Media Queries ----- */
+
+@media (min-width: 900px) {
+   /* ----- Navbar ----- */
+   .hamburger_menu_container,
+   .close_hamburger_container { display: none; }
+ 
+   .navbar {
+     justify-content: space-between;
+   }
+ 
+   .nav__menu {
+     position: inherit;
+     left: inherit;
+     height: inherit;
+     flex-direction: row;
+     justify-content: flex-end;
+     background-color: inherit;
+   }
+ 
+   .nav__menu--item {
+     text-transform: none;
+     font-size: 1rem;
+     margin-bottom: 0;
+     margin-right: 2em;
+   }
+ 
+   .nav__menu--item:last-child { margin-right: 0; }
+   
+   /* ----- Hero section ----- */
+  .hero__title--container {
+    width: 60%;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  /* ----- Interactive section ----- */
+  .interactive {
+    display: flex;
+    position: relative;
+  }
+
+  .interactive__text {
+    position: absolute;
+    right: -30%;
+    bottom: 0%;
+    background-color: var(--white);
+    width: 50%;
+  }
+}
